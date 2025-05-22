@@ -1,7 +1,9 @@
 body{background:#FF739A;}
-.main{ width:400px;
-margin: 0 auto;}
-img{width:100%;}
+img{  
+  width: 300px;              /* Adjust width */
+  height: 300px;             /* Adjust height to make it smaller */
+  object-fit: cover; 
+}
 h1{color:white;
     font-size: 80px;
   font-family: "Henny Penny", system-ui;
@@ -19,8 +21,6 @@ h1{color:white;
 
 }
 .clear, .equals {
-  display: inline-block;
-  padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
@@ -31,8 +31,32 @@ h1{color:white;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  gap: 200px; /* Space between the buttons */
 }
+.button-row {
+  display: flex;           /* Arrange buttons horizontally */
+  justify-content: center; /* Optional: center the buttons horizontally */
+  gap: 20px;               /* Space between the buttons */
+}
+
 input {
     line-height: 40px;
     width: 120px
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centering container */
+.main {
+  display: flex;               /* Activate flexbox */
+  flex-direction: column;      /* Stack elements vertically (default is row, but this will ensure they are stacked) */
+  justify-content: center;     /* Vertically center the content */
+  align-items: center;         /* Horizontally center the content */
+  height: 100vh;               /* Make sure the container takes up the full height of the viewport */
+  padding: 20px;               /* Optional: adds space inside the border */
+  border: 2px solid #000;      /* Adds a border around the main container */
+  border-radius: 10px; 
 }
